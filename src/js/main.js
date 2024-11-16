@@ -23,9 +23,7 @@ function refreshConfig() {
 }
 
 function createFloor() {
-
     const canvas = document.getElementById('canvas');
-
 }
 
 document.getElementById('config-submit-btn').addEventListener('click', () => {
