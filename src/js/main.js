@@ -22,6 +22,26 @@ function refreshConfig() {
     console.log(numberOfFloors, numberOfLifts);
 }
 
+function createFloor() {
+
+    const canvas = document.getElementById('canvas');
+
+}
+
 document.getElementById('config-submit-btn').addEventListener('click', () => {
     refreshConfig()
 })
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const up = document.getElementById('up1');
+    const down = document.getElementById('down1');
+
+    up.addEventListener('click', () => {
+        lift.classList.add('open'); // Add the class to open doors
+    });
+
+    down.addEventListener('click', () => {
+        lift.classList.remove('open'); // Remove the class to close doors
+    });
+});
