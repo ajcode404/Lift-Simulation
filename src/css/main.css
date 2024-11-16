@@ -3,10 +3,60 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin: 5%
 }
 
 .config {
     display: flex;
     justify-content: row;
-    margin-top: 10px;
+    margin-top: 1rem;
+}
+
+.floor {
+
+    width: 100%;
+    height: 8rem;
+    border: solid;
+    display: flex;
+}
+
+.floor-component {
+    margin-left: 1rem;
+}
+
+.lift {
+    position: relative;
+    width: 7rem;
+    height: 8rem;
+    background-color: black;
+    display: flex;
+    overflow: hidden;
+}
+
+.lift-door {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background-color: gray;
+    transition: transform 1s ease-in-out;
+    border: solid;
+}
+
+.lift-door.left {
+    left: 0;
+    transform: translateX(0%);
+}
+
+.lift-door.right {
+    right: 0;
+    transform: translateX(0%);
+}
+
+/* Animations for doors */
+.lift.open .left {
+    transform: translateX(-100%);
+}
+
+.lift.open .right {
+    transform: translateX(100%);
 }
